@@ -25,17 +25,21 @@ namespace CJ.Identity.Api.Controllers
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
 
-            var user = new IdentityUser
+            var usuarioACadastrar = new IdentityUser
             {
                 UserName = usuarioRegistro.Email,
                 Email = usuarioRegistro.Email,
                 EmailConfirmed = true
             };
 
-            var result = await _userManager.CreateAsync(user, usuarioRegistro.Senha);
+            var result = await _userManager.CreateAsync(usuarioACadastrar, usuarioRegistro.Senha);
 
             if (result.Succeeded)
-                return CustomResponse("Usuário cadastro com Sucesso!");            
+            {
+                var usuarioCadastrado = await _userManager.FindByEmailAsync(usuarioACadastrar.Email);
+                var claims = await _userManager.GetClaimsAsync(usuarioCadastrado);
+                return CustomResponse(TokenService.GerarToken(usuarioCadastrado, claims));
+            }
 
             result.Errors.ToList().ForEach(error => AdicionarErro(error.Description));
             return CustomResponse();
@@ -43,7 +47,7 @@ namespace CJ.Identity.Api.Controllers
 
         [HttpPost("autenticar")]
         public async Task<IActionResult> Login(UsuarioLogin usuarioLogin)
-        {
+        {            
             if (!ModelState.IsValid) return CustomResponse(ModelState);
 
             var result = await _signInManager.PasswordSignInAsync(usuarioLogin.Email, usuarioLogin.Senha, false, true);
