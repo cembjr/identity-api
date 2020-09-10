@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CJ.Identity.Api.Extensions
+namespace CB.Identidade.Api.Extensions
 {
     public class IdentityMensagens : IdentityErrorDescriber
     {

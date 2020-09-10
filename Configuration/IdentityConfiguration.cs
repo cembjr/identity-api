@@ -1,7 +1,7 @@
-﻿using CJ.Identity.Api.Controllers;
-using CJ.Identity.Api.Data;
-using CJ.Identity.Api.Extensions;
-using CJ.Identity.Api.Services;
+﻿using CB.Identidade.Api.Controllers;
+using CB.Identidade.Api.Data;
+using CB.Identidade.Api.Extensions;
+using CB.Identidade.Api.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
@@ -11,7 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
-namespace CJ.Identity.Api.Configuration
+namespace CB.Identidade.Api.Configuration
 {
     public static class IdentityConfig
     {

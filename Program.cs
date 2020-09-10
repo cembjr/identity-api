@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace CJ.Identity.Api
+namespace CB.Identidade.Api
 {
     public class Program
     {

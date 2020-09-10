@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "CJ.Identity.Api": {
+    "CB.Identidade.Api": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",

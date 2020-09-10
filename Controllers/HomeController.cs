@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CJ.Identity.Api.Controllers
+namespace CB.Identidade.Api.Controllers
 {
     [Route("")]
     public class HomeController : MainController

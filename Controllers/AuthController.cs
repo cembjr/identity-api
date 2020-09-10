@@ -1,11 +1,11 @@
-﻿using CJ.Identity.Api.Services;
+﻿using CB.Identidade.Api.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using System.Threading.Tasks;
-using static CJ.Identity.Api.Models.UsuarioViewModels;
+using static CB.Identidade.Api.Models.UsuarioViewModels;
 
-namespace CJ.Identity.Api.Controllers
+namespace CB.Identidade.Api.Controllers
 {
     [Route("api/identidade")]
     public class AuthController : MainController

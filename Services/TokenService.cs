@@ -7,9 +7,9 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
-using static CJ.Identity.Api.Models.UsuarioViewModels;
+using static CB.Identidade.Api.Models.UsuarioViewModels;
 
-namespace CJ.Identity.Api.Services
+namespace CB.Identidade.Api.Services
 {
     public static class TokenService
     {

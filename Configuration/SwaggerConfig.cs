@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CJ.Identity.Api.Configuration
+namespace CB.Identidade.Api.Configuration
 {
     public static class SwaggerConfig
     {

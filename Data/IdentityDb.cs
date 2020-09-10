@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CJ.Identity.Api.Data
+namespace CB.Identidade.Api.Data
 {
     public class IdentityDb : IdentityDbContext
     {

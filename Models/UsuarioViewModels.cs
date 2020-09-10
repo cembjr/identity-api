@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CJ.Identity.Api.Models
+namespace CB.Identidade.Api.Models
 {
     public class UsuarioViewModels
     {

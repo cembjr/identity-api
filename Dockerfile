@@ -8,16 +8,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["CJ.Identity.Api.csproj", ""]
-RUN dotnet restore "./CJ.Identity.Api.csproj"
+COPY ["CB.Identidade.Api.csproj", ""]
+RUN dotnet restore "./CB.Identidade.Api.csproj"
 COPY . .
 WORKDIR "/src/."
-RUN dotnet build "CJ.Identity.Api.csproj" -c Release -o /app/build
+RUN dotnet build "CB.Identidade.Api.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "CJ.Identity.Api.csproj" -c Release -o /app/publish
+RUN dotnet publish "CB.Identidade.Api.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "CJ.Identity.Api.dll"]
+ENTRYPOINT ["dotnet", "CB.Identidade.Api.dll"]

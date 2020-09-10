@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace CJ.Identity.Api.Migrations
+namespace CB.Identidade.Api.Migrations
 {
     public partial class inicial : Migration
     {
